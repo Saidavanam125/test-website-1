@@ -146,10 +146,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-		<script>
+		
+		<script type="text/javascript">
+		     function identify(e) {
+			      var name = form["name"].value;
+			      var email = form["email"].value;
+			      var message = form["message"].value;
+			     
+			     analytics.identify(12345, {
+                                 name: name,
+                                 email: email,
+                                 message: message,
 				analytics.track("send message",{
 					type:'details sended'
 				});
+		     }
 	        </script>
 
 	</body>
